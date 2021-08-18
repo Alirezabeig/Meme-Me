@@ -20,7 +20,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func pickAnImage(_ sender: UIBarButtonItem) {
-        
       
         pickerImage.allowsEditing = true
         pickerImage.delegate = self
@@ -28,10 +27,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
         if let mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary) {
             pickerImage.mediaTypes = mediaTypes
                }
-
                present(pickerImage, animated: true)
     }
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
