@@ -20,9 +20,19 @@
                                 <rect key="frame" x="0.0" y="806" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Pick" id="giY-8G-Jwo">
+                                    <barButtonItem title="Photos" width="142.5" id="giY-8G-Jwo">
                                         <connections>
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="DXY-7o-DDF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="MGU-Sk-YIs">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Los-e8-D7c">
+                                            <rect key="frame" x="142.5" y="7" width="120" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Camera"/>
+                                        </button>
+                                        <connections>
+                                            <action selector="camera:" destination="BYZ-38-t0r" id="NOA-RH-LdP"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

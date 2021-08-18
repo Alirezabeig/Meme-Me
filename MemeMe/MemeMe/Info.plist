@@ -4,6 +4,8 @@
 <dict>
 	<key></key>
 	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>Using camera to allows you add pictures </string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Just using your library for your own sake</string>
 	<key>CFBundleDevelopmentRegion</key>
