@@ -24,17 +24,17 @@
                                 <items>
                                     <barButtonItem title="Photos" width="142.5" id="giY-8G-Jwo">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="DXY-7o-DDF"/>
+                                            <action selector="btnImagePicker:" destination="BYZ-38-t0r" id="yYg-kN-cDM"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="MGU-Sk-YIs">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Los-e8-D7c">
-                                            <rect key="frame" x="142.5" y="7" width="120" height="30"/>
+                                            <rect key="frame" x="142.5" y="0.0" width="120" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Camera"/>
                                         </button>
                                         <connections>
-                                            <action selector="camera:" destination="BYZ-38-t0r" id="NOA-RH-LdP"/>
+                                            <action selector="cameraPressed:" destination="BYZ-38-t0r" id="ekf-Sm-hkY"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -84,34 +84,49 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rVr-x1-GIw"/>
                     <connections>
-                        <outlet property="camera" destination="MGU-Sk-YIs" id="rq2-oS-NB3"/>
+                        <outlet property="camera" destination="MGU-Sk-YIs" id="Y5H-4e-5uo"/>
                         <outlet property="imageView" destination="ZrX-lF-sqK" id="VZb-sg-BDt"/>
                         <outlet property="shareB" destination="Z4h-1j-5vR" id="NS4-hU-sDY"/>
-                        <segue destination="1Tm-NK-Jjh" kind="presentation" id="mZ9-pe-f8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vlM-LQ-XqG">
+        <!--Camera Controller-->
+        <scene sceneID="btL-Qi-Nbh">
             <objects>
-                <viewController id="1Tm-NK-Jjh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2ul-sl-eqB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController id="eCF-En-hIX" customClass="CameraController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kl9-Ee-cgH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="kfJ-sy-z2b"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-GY-jey">
+                                <rect key="frame" x="151" y="650" width="113" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="eCF-En-hIX" eventType="touchUpInside" id="4I7-ap-y2y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vPP-tE-LKk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ejW-km-yG4"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="Wd6-GY-jey" id="DAR-1i-njB"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aWP-pe-T2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8o-I4-lU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864" y="78"/>
+            <point key="canvasLocation" x="18.840579710144929" y="830.35714285714278"/>
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="200" height="200"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
