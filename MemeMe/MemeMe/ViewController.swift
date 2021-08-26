@@ -51,16 +51,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
         dismiss(animated: true)
     }
     
-
     
     @IBAction func cameraPressed(_ sender: UIBarButtonItem) {
         
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .camera
-            present( imagePicker, animated: true)
-      
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        present( imagePicker, animated: true)
     }
+    
+    
+    
     
 }
 

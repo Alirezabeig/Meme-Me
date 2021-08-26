@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCL-Pu-j7f">
-                                <rect key="frame" x="0.0" y="806" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCL-Pu-j7f">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <barButtonItem title="Photos" width="142.5" id="giY-8G-Jwo">
@@ -27,39 +26,27 @@
                                             <action selector="btnImagePicker:" destination="BYZ-38-t0r" id="yYg-kN-cDM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="MGU-Sk-YIs">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Los-e8-D7c">
-                                            <rect key="frame" x="142.5" y="0.0" width="120" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Camera"/>
-                                        </button>
+                                    <barButtonItem title="Camera" width="142.5" id="aKL-t8-Fl3">
                                         <connections>
-                                            <action selector="cameraPressed:" destination="BYZ-38-t0r" id="ekf-Sm-hkY"/>
+                                            <action selector="cameraPressed:" destination="BYZ-38-t0r" id="lXT-7l-85e"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZrX-lF-sqK">
-                                <rect key="frame" x="-2.69042800556565" y="291.05927041403606" width="414" height="316.00000000000006"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" placeholder="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jMd-gd-ven">
-                                <rect key="frame" x="88" y="189" width="233" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" placeholder="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jMd-gd-ven">
+                                <rect key="frame" x="184" y="189" width="46" height="29"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" placeholder="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-1z-ojJ">
-                                <rect key="frame" x="88" y="615" width="233" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" placeholder="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-1z-ojJ">
+                                <rect key="frame" x="156" y="676" width="102" height="30"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A94-C5-7Jv">
-                                <rect key="frame" x="-13" y="90" width="427" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A94-C5-7Jv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <items>
                                     <barButtonItem style="plain" id="wqk-3t-1Qg">
@@ -73,20 +60,45 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="EGH-sC-coA">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uWn-Iw-uZu">
-                                            <rect key="frame" x="359" y="7" width="48" height="30"/>
+                                            <rect key="frame" x="346" y="7" width="48" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Cancel"/>
                                         </button>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZrX-lF-sqK">
+                                <rect key="frame" x="0.0" y="226" width="414" height="316"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="9mS-zb-lNl"/>
+                                    <constraint firstAttribute="height" constant="316" id="e6h-5L-j9D"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="A94-C5-7Jv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BIL-U7-HjD"/>
+                            <constraint firstItem="A94-C5-7Jv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DrQ-T8-86l"/>
+                            <constraint firstItem="ZrX-lF-sqK" firstAttribute="top" secondItem="jMd-gd-ven" secondAttribute="bottom" constant="8" id="EiE-mR-hNm"/>
+                            <constraint firstItem="YCL-Pu-j7f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uea-Af-Icb"/>
+                            <constraint firstItem="R8v-1z-ojJ" firstAttribute="top" secondItem="ZrX-lF-sqK" secondAttribute="bottom" constant="134" id="XDY-dn-3pe"/>
+                            <constraint firstItem="YCL-Pu-j7f" firstAttribute="top" secondItem="R8v-1z-ojJ" secondAttribute="bottom" constant="107" id="Xyb-t2-byi"/>
+                            <constraint firstItem="R8v-1z-ojJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YvF-Rz-n0T"/>
+                            <constraint firstItem="ZrX-lF-sqK" firstAttribute="top" secondItem="jMd-gd-ven" secondAttribute="bottom" constant="8" id="bVf-4T-0xZ"/>
+                            <constraint firstItem="YCL-Pu-j7f" firstAttribute="top" secondItem="R8v-1z-ojJ" secondAttribute="bottom" constant="107" id="cy2-Dk-4ql"/>
+                            <constraint firstItem="ZrX-lF-sqK" firstAttribute="top" secondItem="jMd-gd-ven" secondAttribute="bottom" constant="8" id="d8j-DV-qES"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YCL-Pu-j7f" secondAttribute="bottom" id="diT-WW-5dG"/>
+                            <constraint firstItem="jMd-gd-ven" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hXu-8o-LNv"/>
+                            <constraint firstItem="jMd-gd-ven" firstAttribute="top" secondItem="A94-C5-7Jv" secondAttribute="bottom" constant="101" id="hn4-7R-vq5"/>
+                            <constraint firstItem="YCL-Pu-j7f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ibP-vo-ub8"/>
+                            <constraint firstItem="ZrX-lF-sqK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qsB-Tl-Duf"/>
+                            <constraint firstItem="A94-C5-7Jv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vUU-6y-laY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rVr-x1-GIw"/>
                     <connections>
-                        <outlet property="camera" destination="MGU-Sk-YIs" id="Y5H-4e-5uo"/>
+                        <outlet property="camera" destination="aKL-t8-Fl3" id="0l3-NB-Djb"/>
                         <outlet property="imageView" destination="ZrX-lF-sqK" id="VZb-sg-BDt"/>
                         <outlet property="shareB" destination="Z4h-1j-5vR" id="NS4-hU-sDY"/>
                     </connections>
