@@ -11,39 +11,48 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
                       UINavigationControllerDelegate {
 
 
-    @IBOutlet weak var imagePreview: UIImageView!
-    let pickerImage = UIImagePickerController()
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var shareB: UIButton!
+    @IBOutlet weak var camera: UIBarButtonItem!
+    
+    let shareImage = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate = self
+        
+        
         // Do any additional setup after loading the view.
     }
 
     @IBAction func pickAnImage(_ sender: UIBarButtonItem) {
-        pickerImage.allowsEditing = true
-        pickerImage.delegate = self
-        pickerImage.sourceType = .photoLibrary
-        if let mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary) {
-            pickerImage.mediaTypes = mediaTypes
-               }
-               present(pickerImage, animated: true)
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true)
+        
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
-            self.imagePreview.image = image
+            self.imageView.image = image
         }
-
-        self.pickerImage.dismiss(animated: true, completion: nil)
+        self.imagePicker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func camera(_ sender: UIBarButtonItem) {
-        
-        let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
+        imagePicker.delegate = self
         imagePicker.sourceType = .camera
             present(imagePicker, animated: true, completion: nil)
-            
     }
     
+    
+    @IBAction func trybutton(_ sender: UIButton) {
+        let shareB = UIActivityViewController(activityItems: [shareImage], applicationActivities: nil)
+        shareB.popoverPresentationController?.sourceView = self.view
+        present(shareB, animated: true, completion: nil)
+    }
 }
 
