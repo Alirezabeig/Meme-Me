@@ -122,14 +122,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
         var meme: UIImage
         
     }
-    
+    // Generate Meme
     func generateMeme () -> UIImage {
         
         self.toolBar.isHidden = true
         self.navBar.isHidden = true
         
-        UIGraphicsBeginImageContext(view.frame.size)
-        view.layer.render(in: UIGraphicsGetCurrentContext() ?? <#default value#>)
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
             let memedImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
 
