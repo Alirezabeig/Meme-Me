@@ -12,12 +12,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
 
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var shareB: UIButton!
     @IBOutlet weak var camera: UIBarButtonItem!
     @IBOutlet weak var bottomTexField: UITextField!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var navBar: UIToolbar!
     @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var cancel: UIBarButtonItem!
     
     
     var image : UIImage?
@@ -141,6 +142,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
         
     }
     
+    // Save Created Meme
     func saveMeme() {
         
         let memedImage = generateMeme()
@@ -148,5 +150,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
         _ = Meme(topFieldText:  topTextField.text! , bottomFieldText: bottomTexField.text! , Image: imageView.image! , meme: memedImage )
     }
 
+    
+    // Share The Created Meme
+    @IBAction func sharButtonPressed(_ sender: Any) {
+        
+        let meme = generateMeme()
+        let controller = UIActivityViewController (activityItems: [meme], applicationActivities: nil)
+        controller.completionWithItemsHandler = { activity, completed, items , error in if completed {
+            self.saveMeme()
+            self.dismiss(animated: true, completion: nil)
+            }
+        
+        }
+        
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    // Cancel all actions -
+    @IBAction func cancelButton(_ sender: Any) {
+        imageView.image = nil
+        topTextField.text = "TOP"
+        bottomTexField.text = "BOTTOM"
+        shareButton.isEnabled = false
+    }
+    
+    
 }
+
 

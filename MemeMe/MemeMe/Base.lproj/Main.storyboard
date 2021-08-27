@@ -49,21 +49,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <items>
-                                    <barButtonItem style="plain" id="wqk-3t-1Qg">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Z4h-1j-5vR">
-                                            <rect key="frame" x="20" y="9" width="58" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal">
-                                                <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
-                                            </state>
-                                        </button>
+                                    <barButtonItem width="162.5" id="Oj1-dd-EZz" userLabel="shareButton">
+                                        <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                                        <connections>
+                                            <action selector="sharButtonPressed:" destination="BYZ-38-t0r" id="gYa-8M-k37"/>
+                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="EGH-sC-coA">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uWn-Iw-uZu">
-                                            <rect key="frame" x="346" y="7" width="48" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Cancel"/>
-                                        </button>
+                                    <barButtonItem title="Cancel" width="161.5" id="7Wa-eV-Hy3" userLabel="cancel">
+                                        <connections>
+                                            <action selector="cancelButton:" destination="BYZ-38-t0r" id="UpY-Pg-9ab"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -100,10 +95,10 @@
                     <connections>
                         <outlet property="bottomTexField" destination="R8v-1z-ojJ" id="1vL-Gs-f0a"/>
                         <outlet property="camera" destination="aKL-t8-Fl3" id="0l3-NB-Djb"/>
+                        <outlet property="cancel" destination="7Wa-eV-Hy3" id="PBt-BR-CFj"/>
                         <outlet property="imageView" destination="ZrX-lF-sqK" id="VZb-sg-BDt"/>
                         <outlet property="navBar" destination="A94-C5-7Jv" id="IB4-Lh-ZHb"/>
-                        <outlet property="shareB" destination="Z4h-1j-5vR" id="NS4-hU-sDY"/>
-                        <outlet property="toolBar" destination="YCL-Pu-j7f" id="ccN-kD-B9E"/>
+                        <outlet property="shareButton" destination="Oj1-dd-EZz" id="nvI-Go-Uuz"/>
                         <outlet property="topTextField" destination="jMd-gd-ven" id="cXu-X5-PRx"/>
                     </connections>
                 </viewController>
