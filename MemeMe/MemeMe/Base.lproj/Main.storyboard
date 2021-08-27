@@ -98,9 +98,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="rVr-x1-GIw"/>
                     <connections>
+                        <outlet property="bottomTexField" destination="R8v-1z-ojJ" id="1vL-Gs-f0a"/>
                         <outlet property="camera" destination="aKL-t8-Fl3" id="0l3-NB-Djb"/>
                         <outlet property="imageView" destination="ZrX-lF-sqK" id="VZb-sg-BDt"/>
+                        <outlet property="navBar" destination="A94-C5-7Jv" id="IB4-Lh-ZHb"/>
                         <outlet property="shareB" destination="Z4h-1j-5vR" id="NS4-hU-sDY"/>
+                        <outlet property="toolBar" destination="YCL-Pu-j7f" id="ccN-kD-B9E"/>
+                        <outlet property="topTextField" destination="jMd-gd-ven" id="cXu-X5-PRx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
